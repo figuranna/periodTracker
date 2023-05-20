@@ -1,5 +1,4 @@
 import flowEnum
-from tkinter.ttk import Progressbar
 from tkinter import *
 
 root = Tk()
