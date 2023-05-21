@@ -20,31 +20,31 @@ Gets the data from the *periodtracker* database.
 **Functions**
 
 - *insertPeriod*
-  - Inserts the *date* into the *period* table.
+  - Inserts the *date* into the *period* table
 - *insertSymptoms*
-  - Inserts the datas into the symptoms table.
+  - Inserts the datas into the symptoms table
 - *selectFiveDates*
-  - Selects the latest 5 dates and stores it in a list.
+  - Selects the latest 5 dates and stores it in a list
 
 ### trackerController
-Connects the model and the view.
+Connects the model and the view
 
 **imports**
 - *trackerModel*
 - _tkinter -> *_
 - *datetime*
-  - Get's the current date with today() and formats it.
+  - Get's the current date with today() and formats it
 
 **Functions**
 
 - *fillList*
-  - Passes the list elements into a new list that is reachable from *trackerView*.
+  - Passes the list elements into a new list that is reachable from *trackerView*
 - *saveData*
   - *getEntryData*: Gets the input from the entrys and a dropdown menu
-  - Saves the user's input into the database.
+  - Saves the user's input into the database
 
 ### trackerView
-Creates the User Interface using Tkinter.
+Creates the User Interface using Tkinter
 
 **imports**
 - *flowEnum*
@@ -54,10 +54,10 @@ Creates the User Interface using Tkinter.
 **Functions**
 
 - *popup*
-  - In charge of the Log Period window. 
+  - In charge of the Log Period window
 
 ### flowEnum
-Strores the period flow's intensity in an Enum.
+Strores the period flow's intensity in an Enum
 
 **Enums**
 - LIGHT
