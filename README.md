@@ -44,7 +44,7 @@ Creates the User Interface using Tkinter.
 ### flowEnum
 Strores the period flow's intensity in an Enum.
 
-*Enums*
+**Enums**
 - LIGHT
 - MEDIUM
 - HEAVY
