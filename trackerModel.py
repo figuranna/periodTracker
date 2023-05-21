@@ -3,7 +3,7 @@ import mysql.connector
 db = mysql.connector.connect(
     host="localhost",
     user="root",
-    passwd="K4m1k4z3G1rL2!",
+    passwd="",
     database="periodtracker",
     auth_plugin="mysql_native_password" #caching sha2 password
 )
