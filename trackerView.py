@@ -8,6 +8,7 @@ root.geometry('450x250')
 root.resizable(0,0)
 
 text_color = "#b9263a"
+date_color = "#e65d6f"
 
 def popup():
 
@@ -21,7 +22,7 @@ def popup():
 
     #Label -> DATE showcase
     dateTitleLabel=Label(logFrame, text="Date: ", font='Verdena 12 bold',fg=text_color).grid(row=0, column=0) 
-    dateLabel=Label(logFrame, text=trackerController.formatToday, font='Verdena 10 bold',fg=text_color).grid(row=0, column=2)
+    dateLabel=Label(logFrame, text=trackerController.formatToday, font='Verdena 10 bold',fg=date_color).grid(row=0, column=2)
 
     #DropMenu
     flow=[flowEnum.Flow.LIGHT.value,flowEnum.Flow.MEDIUM.value,flowEnum.Flow.HEAVY.value]
@@ -33,14 +34,14 @@ def popup():
 
     #Input
     moodLabel = Label(logFrame, text="Mood: ", font='Verdena 12 bold',fg=text_color).grid(row=2, column=0)
-    moodEntry = Entry(logFrame, font='Verdena 12 bold')
+    moodEntry = Entry(logFrame, font='Verdena 12 bold',fg=text_color)
     moodEntry.grid(row=2, column=2)
     symptomLabel = Label(logFrame, text="Symptom(s): ", font='Verdena 12 bold',fg=text_color).grid(row=3, column=0)
     symptomEntry = Entry(logFrame, font='Verdena 12 bold',fg=text_color)
     symptomEntry.grid(row=3, column=2)
 
     #Buttons
-    doneButton = Button(logFrame, text="Done", font='Verdena 12 bold',fg=text_color, command=lambda: trackerController.saveData(flowVar,moodEntry,symptomEntry,logPeriod)).grid(row=4, column=1, pady=30)
+    doneButton = Button(logFrame, text="Done", font='Verdena 12 bold',background="#e65d6f",fg="#fff", command=lambda: trackerController.saveData(flowVar,moodEntry,symptomEntry,logPeriod)).grid(row=4, column=1, pady=30)
     
     logPeriod.mainloop()
 
@@ -52,11 +53,10 @@ menuFrame.pack(padx=5, pady=5)
 logButton = Button(menuFrame, text='Log period', command=popup, font='Verdena 12 bold', fg=text_color).grid(row=0, column=0, pady=10)
 
 #Label -> lists the latest 5 period logs with dates
-n=1
+n=2
+dateLabel = Label(menuFrame, text="-----The last five logged periods-----", font='Verdena 10 bold', fg=text_color).grid(row=1, column=0)
 for x in trackerController.fillList():
-    var = StringVar()
-    var.set(x)
-    listLabel = Label(menuFrame, textvariable=var, font='Verdena 10 bold', fg=text_color).grid(row=n, column=0)
+    listDateLabel = Label(menuFrame, text=x, font='Verdena 10 bold', fg=date_color).grid(row=n, column=0)
     n+=1
 
 
