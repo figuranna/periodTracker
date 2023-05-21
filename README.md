@@ -13,6 +13,10 @@ The Python program covers the following point:
 ### trackerModel
 Gets the data from the *periodtracker* database.
 
+**imports**
+- *mysql.connector*
+  - Makes the connection possible between the program and the database 
+
 **Functions**
 
 - *insertPeriod*
@@ -25,6 +29,12 @@ Gets the data from the *periodtracker* database.
 ### trackerController
 Connects the model and the view.
 
+**imports**
+- *trackerModel*
+- _tkinter -> *_
+- *datetime*
+  - Get's the current date with today() and formats it.
+
 **Functions**
 
 - *fillList*
@@ -35,6 +45,11 @@ Connects the model and the view.
 
 ### trackerView
 Creates the User Interface using Tkinter.
+
+**imports**
+- *flowEnum*
+- *trackerController*
+- _tkinter -> *_
 
 **Functions**
 
@@ -48,3 +63,4 @@ Strores the period flow's intensity in an Enum.
 - LIGHT
 - MEDIUM
 - HEAVY
+## Database
