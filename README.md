@@ -64,3 +64,13 @@ Strores the period flow's intensity in an Enum
 - MEDIUM
 - HEAVY
 ## Database
+### Tables
+**Period table**
+
+![period_database](https://github.com/figuranna/periodTracker/assets/101461379/3b76d638-73f1-4efd-bc1e-82cffba4dce1)
+
+**Symptoms table**
+
+![symptoms_database](https://github.com/figuranna/periodTracker/assets/101461379/9e924111-9857-413d-b9b7-7a8da23e3288)
+### Connection
+![database_view](https://github.com/figuranna/periodTracker/assets/101461379/ac8f7617-4b9e-477c-8c14-09de32ac78f8)
