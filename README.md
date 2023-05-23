@@ -65,11 +65,11 @@ Strores the period flow's intensity in an Enum
 - HEAVY
 ## Database
 ### Tables
-- **Period table**
+**Period table**
   - Primary key: **periodId**
 ![period_database](https://github.com/figuranna/periodTracker/assets/101461379/9e924111-9857-413d-b9b7-7a8da23e3288)
 
-- **Symptoms table**
+**Symptoms table**
   - Primary and Foreign key: **symptomsId**
 ![symptoms_database](https://github.com/figuranna/periodTracker/assets/101461379/3b76d638-73f1-4efd-bc1e-82cffba4dce1)
 ### Connection
